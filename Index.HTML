@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Tugas Mandiri 1 Modul 2 PHP</title>
+    </head>
+    <body>
+        <h3>Pengecekan Diskon</h3>
+        <p>Masukkan total</p>
+        <form action="" method="post">
+            <input type="text" name="price" placeholder="Input Total Di sini">
+            <input type="submit" value="submit" name="submit">
+        </form>
+    </body>
+</html>
+
+<?php
+$total = @$_POST['price'];
+
+if ($total >= 500000) {
+    $diskon =  $total * 50/100;
+    echo "Harganya $diskon, Diskon  50%";
+}
+elseif ($total >= 100000) {
+    $diskon = $total * 90/100;
+    echo "Harganya $diskon, Diskon 10%";
+}
+elseif ($total >= 50000) {
+    $diskon = $total * 95 /100;
+    echo "Harganya $diskon, Diskon  5%";
+}
+else {
+    echo "Selain itu tidak ada diskon";
+}
+?>
